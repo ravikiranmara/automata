@@ -88,8 +88,8 @@ vector<Transition> State::GetTransitions(char symbol) {
 
 void State::DumpState()
 {
-    State *state;
-    std::cout << "name:" << this->name << std::endl;
+    std::cout << "----   STATE   ----" << std::endl;
+    std::cout << "Name:" << this->name << std::endl;
     std::cout << "state type:" << this->stateType << std::endl;
     std::cout <<"Transitions:(" << this->transitionCount() << ")" << endl;
 

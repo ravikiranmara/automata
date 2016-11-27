@@ -24,8 +24,10 @@ int main(int argc, char **argv)
 
     // program machine
     turingMachine.programMachine(defn);
+    turingMachine.dumpMachineState();
     
     // simulate
 	cout << "Simulate Turing Machine" << endl;
+    
 	return 0;
 }

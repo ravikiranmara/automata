@@ -59,14 +59,14 @@ int TuringMachine::addState(string statename) {
 }
 
 int TuringMachine::parseTransition(string transition) {
-    string fromstatename = transition.substr(0,1);
-    string tostatename = transition.substr(6,7);
+    string fromstatename = transition.substr(0,2);
+    string tostatename = transition.substr(6,2);
     char readsym = transition[3];
     char writesym = transition[9];
     char dir = transition[11];
     
     cout << fromstatename << "," << readsym << "->" << tostatename 
-        << "," << writesym << "," << dir << endl;
+        << "," << writesym << ",," << dir << endl;
         
     // load transition
     int fromstateindex = this->getTransitionIndex(fromstatename);;
@@ -92,6 +92,9 @@ int TuringMachine::parseTransition(string transition) {
 int TuringMachine::dumpMachineState() {
     cout << "=========      Turing Machine       ==========" << endl;
     cout << "Tape : " << tape << endl;
+    cout << "States" << endl;
+    for(auto &state : states)
+        state.DumpState();
     cout << "================================================" << endl;
 }
 

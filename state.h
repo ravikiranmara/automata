@@ -78,6 +78,7 @@ class Transition
     }
     
     void dumpTransition() {
+        cout << "\t--- transition ---" << endl;
         cout << "\tread symbol:" << this->symbol << endl;
         cout << "\tto state:" << this->toStateName << endl;
         cout << "\twrite symbol:" << this->writeSymbol << endl;

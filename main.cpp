@@ -20,14 +20,17 @@ using std::ofstream;
 int main(int argc, char **argv)
 {
     TuringMachine turingMachine;
-    string defn = "#q0,a->qa,a,R#q0,a->q1,a,R##ab";
+    string defn; // = "#q0,a->qa,a,R#q0,a->q1,a,R#q0,b->q1,b,R#q0,_->q1,_,R#q1,b->q1,b,R#q1,_->q1,_,R#q1,a->qr,a,R#q1,b->qr,b,R##ab#";
+    
+    cin >> defn;
 
     // program machine
     turingMachine.programMachine(defn);
-    turingMachine.dumpMachineState();
+    // turingMachine.dumpMachineState();
     
     // simulate
-	cout << "Simulate Turing Machine" << endl;
+	// cout << "Simulate Turing Machine" << endl;
+    turingMachine.simulate();
     
 	return 0;
 }

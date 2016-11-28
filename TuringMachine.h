@@ -13,15 +13,23 @@ class TuringMachine
 {
     vector<State> states;
     string tape;
+    int numtransition;
+    int numstate;
+    string machinestring;
+    string orgtape; 
     
 public:
     TuringMachine();
     
-    int getTransitionIndex(string statename);
+    int runTurn(int stateindex, int tapepos, int runcount);
+    int getStateIndex(TMStateType statetype);
+    int getStateIndex(string statename);
     int programMachine(string definition); 
     int parseTransition(string transition);
     int addState(string statename);
     int dumpMachineState();
+    void appendTape();
+    int simulate();
 };
 
 #endif

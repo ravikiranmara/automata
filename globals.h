@@ -7,5 +7,6 @@ const int status_failure = 1;
 
 const int TMStateTransitionMax = 5;
 const int FromStateMax = 100;
+const int MaxRunCount = 20;
 
 #endif

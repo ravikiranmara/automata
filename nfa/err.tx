@@ -1,0 +1,6 @@
+In file included from main.cpp:12:0:
+test_state.cpp: In function ‘int test_nfa(std::string&)’:
+test_state.cpp:44:17: error: ‘start’ was not declared in this scope
+     dfa.convert(start, final);
+                 ^
+make: *** [all] Error 1

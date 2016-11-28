@@ -1,0 +1,4 @@
+(a|b)*(aba|bab)(a|b)*
+aba
+bab
+e
